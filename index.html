@@ -12,14 +12,43 @@
     <!-- Google fonts init  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <title>Emergency Service</title>
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 class="text-5xl text-center">Emergency-Service</h1>
+    <header>
+        <nav
+            class=" w-11/12 mx-auto flex flex-col justify-between items-center gap-4 py-[23px] lg:flex-row md:flex-row ">
+            <div class="flex gap-2 items-center">
+                <img src="./assets/logo.png" class="h-[50px] w-[50px]" alt="Logo">
+                <h1 class=" text-sm md:text-[20px] lg:text-xl  font-bold max-w-[135px] text-[#006747]">Emergency Service
+                </h1>
+            </div>
+            <ul class="flex gap-2 sm:gap-4">
+                <li
+                    class="h-[50px] w-[100px]  sm:w-[123px] bg-[rgba(65,255,107,0.1)] text-xl font-bold  rounded-2xl flex justify-center items-center">
+                    <span id="heart-count" class="mr-2 ">0</span> <i class="fa-solid fa-heart text-red-500 "></i>
+                </li>
+                <li
+                    class="h-[50px]  w-[123px] bg-[rgba(65,255,107,0.1)] text-xl font-bold   rounded-2xl flex justify-center items-center">
+                    <span class="mr-2" id="coinCount">100</span> <img class="h-[30px] w-[30px]" src="./assets/coin.png"
+                        alt="Coin Icon">
+                </li>
+                <li
+                    class="h-[50px]  w-[123px] bg-[rgba(65,255,107,0.1)] text-xl   rounded-2xl flex justify-center items-center">
+                    <span id="copy-count" class="mr-2 font-semibold">0</span> Copy
+                </li>
+            </ul>
+        </nav>
+    </header>
 </body>
 
 </html>

@@ -4,6 +4,9 @@ let coins = 100;
 
 const heartCount = document.getElementById("heartCount");
 const copyCount = document.getElementById("copyCount");
+const coinCount = document.getElementById("coinCount");
+const historyList = document.getElementById("historyList");
+const clearHistoryBtn = document.getElementById("clearHistory");
 const cardContainer = document.getElementById("cardContainer");
 
 cardContainer.addEventListener("click", (e) => {
@@ -64,5 +67,30 @@ cardContainer.addEventListener("click", (e) => {
     coinCount.textContent = coins;
 
     alert(`📞 Calling ${name} at ${number}`);
+
+    // BD Time zone
+    const time = new Date().toLocaleTimeString("en-BD", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+      timeZone: "Asia/Dhaka",
+    });
+    // Call History
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <div class="bg-green-50 flex justify-between items-center p-3 rounded-lg mb-3 shadow-sm">
+        <div>
+          <p class="text-black text-lg font-semibold">${name}</p>
+          <p class="font-extrabold text-lg">${number}</p>
+        </div>
+        <span class="font-semibold">${time}</span>
+      </div>
+    `;
+    historyList.appendChild(li);
   }
+});
+// Clear History
+clearHistoryBtn.addEventListener("click", () => {
+  historyList.innerHTML = "";
 });

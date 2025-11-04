@@ -81,8 +81,8 @@ cardContainer.addEventListener("click", (e) => {
     li.innerHTML = `
       <div class="bg-green-50 flex justify-between items-center p-3 rounded-lg mb-3 shadow-sm">
         <div>
-          <p class="text-black text-lg font-semibold">${name}</p>
-          <p class="font-extrabold text-lg">${number}</p>
+          <p class="text-black text-base font-bold">${name}</p>
+          <p class="font-extrabold text-lg text-gray-600">${number}</p>
         </div>
         <span class="font-semibold">${time}</span>
       </div>
